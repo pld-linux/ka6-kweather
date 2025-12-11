@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kweather
 Summary:	KWeather
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	46c32145f303576e094ea7434c1cdf1b
+# Source0-md5:	87b20d6d9193817599d68ebe60ea203d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Charts-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -86,17 +86,8 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kweather
-%{_libdir}/qt6/plugins/plasma/applets/plasma_applet_kweather_1x4.so
+%{_libdir}/qt6/plugins/plasma/applets/org.kde.plasma.kweather_1x4.so
 %{_desktopdir}/org.kde.kweather.desktop
 %{_datadir}/dbus-1/services/org.kde.kweather.service
 %{_iconsdir}/hicolor/scalable/apps/org.kde.kweather.svg
 %{_datadir}/metainfo/org.kde.kweather.appdata.xml
-%{_datadir}/metainfo/org.kde.plasma.kweather_1x4.appdata.xml
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/contents
-%dir %{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/contents/ui
-%{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/contents/ui/LocationSelector.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/contents/ui/WeatherContainer.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/contents/ui/main.qml
-%{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/metadata.json
-%{_datadir}/plasma/plasmoids/org.kde.plasma.kweather_1x4/metadata.json.license
