@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.12.3
+%define		kdeappsver	26.04.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kweather
 Summary:	KWeather
 Name:		ka6-%{kaname}
-Version:	25.12.3
-Release:	2
+Version:	26.04.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	a1521c1c469579217649b8ffd1a85853
+# Source0-md5:	4ca7ed9998677810e5965bce319cbbf5
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Charts-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
