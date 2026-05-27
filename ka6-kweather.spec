@@ -48,7 +48,13 @@ Conflicts:	kde4-libksane >= 4.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-A convergent weather application for Plasma.
+A convergent weather application for Plasma. Has flat and
+dynamic/animated views for showing forecasts and other information.
+
+%description -l pl.UTF-8
+Spójna aplikacja pogodowa dla Plazmy. Ma płaskie i
+dynamiczne/animowane widoki do pokazywania prognozy pogody i innych
+danych.
 
 %prep
 %setup -q -n %{kaname}-%{version}
