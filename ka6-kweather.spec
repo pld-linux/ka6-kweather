@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	6.13.0
 %define		qtver		6.8
 %define		kaname		kweather
 Summary:	KWeather
 Name:		ka6-%{kaname}
-Version:	26.04.3
+Version:	26.08.0
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	75ba6b4774875eb35156953c6e098c2d
+# Source0-md5:	63b49ed789d8dba063ad3890aff6d59a
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Charts-devel >= %{qtver}
 BuildRequires:	Qt6Core-devel >= %{qtver}
@@ -93,6 +93,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_bindir}/kweather
 %{_libdir}/qt6/plugins/plasma/applets/org.kde.plasma.kweather_1x4.so
+%{_libdir}/qt6/plugins/kf6/krunner/krunnerkweather.so
 %{_desktopdir}/org.kde.kweather.desktop
 %{_datadir}/dbus-1/services/org.kde.kweather.service
 %{_iconsdir}/hicolor/scalable/apps/org.kde.kweather.svg
